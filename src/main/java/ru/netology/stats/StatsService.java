@@ -1,7 +1,7 @@
 package ru.netology.stats;
 
 public class StatsService {
-   //Сумма всех продаж
+   //Сумма продаж
     public long calclulatetotalSum(long[] sales) {
         long totalSum = 0;
         for (long sale : sales) {
