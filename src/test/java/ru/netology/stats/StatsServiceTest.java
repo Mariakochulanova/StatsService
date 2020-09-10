@@ -27,9 +27,42 @@ class StatsServiceTest {
         System.out.println(actual);
     }
     @Test
-    void maxSale(){
+    void monthMaxSale(){
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 8;
+        long actual = service.findMonthMaxSale(sales);
+        assertEquals(expected, actual);
+        System.out.println(actual);
 
+    }
+    @Test
+    void findMonthMinSale() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 8;
+        long actual = service.findMonthMinSale(sales);
+        assertEquals(expected, actual);
+        System.out.println(actual);
+    }
+
+    @Test
+    void numMonthLessMid () {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+        long actual = service.numMonthLessMid(sales);
+        assertEquals(expected, actual);
+        System.out.println(actual);
+    }
+
+    @Test
+    void numMonthMoreMid () {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+        long actual = service.numMonthMoreMid (sales);
+        assertEquals(expected, actual);
+        System.out.println(actual);
     }
 }
