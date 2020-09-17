@@ -14,8 +14,8 @@ public class StatsService {
     public static long calculatemidSum(long[] sales) {
         StatsService service = new StatsService();
         long totalSum = service.calclulatetotalSum(sales);{
-            long midTotalSum = totalSum / sales.length;
-            return midTotalSum;
+            long midSum = totalSum / sales.length;
+            return midSum;
         }
     }
    // Месяц, в котором был пик продаж
