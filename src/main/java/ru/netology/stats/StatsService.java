@@ -12,13 +12,11 @@ public class StatsService {
 
    //Средняя сумма
     public static long calculatemidSum(long[] sales) {
-        long totalSum = 0;
-        long midTotalSum = 0;
-        for (long sale : sales) {
-            totalSum += sale;
-            midTotalSum = totalSum / sales.length;
+        StatsService service = new StatsService();
+        long totalSum = service.calclulatetotalSum(sales);{
+            long midTotalSum = totalSum / sales.length;
+            return midTotalSum;
         }
-        return midTotalSum;
     }
    // Месяц, в котором был пик продаж
     public long findMonthMaxSale(long[] sales) {
@@ -41,7 +39,7 @@ public class StatsService {
         int month = 1;
         int monthMinSales = month;
         for (long sale : sales) {
-            if(minSale <= sale) {
+            if(minSale >= sale) {
                 minSale = sale;
                 monthMinSales = month;
             }
